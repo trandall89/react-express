@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-const Header = ({ message }) => {
-  return (
+class Header extends Component  {
+
+  render() {
+
+    return (
     <h2 className="Header text-center">
-      {message}
+      {this.props.message}
     </h2>
   );
-};
 
-Header.propTypes = {
-  message: React.PropTypes.string
-};
+  }
 
+}
+
+Header.defaultProps = {
+  message:"test"
+}
 export default Header;

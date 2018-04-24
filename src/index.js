@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-import App from './components/App';
+import data from './testData'
+import PropTypes from 'prop-types';
+import App from './components/app';
 
 ReactDOM.render(
-  <App initialData={window.initialData} />,
+  <App contests={ data.contests }/>,
   document.getElementById('root')
 );
